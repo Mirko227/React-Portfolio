@@ -128,14 +128,14 @@ function Projects() {
           onMouseLeave={handleTouchEnd}
           onMouseUp={handleTouchEnd}
         >
-          {projectsData.map(({ id, name, imgPath }) => (
+          {projectsData.map(({ id, name, imgPath, link }) => (
             <div
               className={projects.projectItem}
               key={id}
               ref={(el) => addToRefs(el, itemsRefs)}
             >
               <figure>
-                <a className={projects.projectName} href="">
+                <a className={projects.projectName} href={link}>
                   {name}
                 </a>
                 <IKImage urlEndpoint={imagekitConfig.urlEndpoint} path={imgPath} alt={name}/>

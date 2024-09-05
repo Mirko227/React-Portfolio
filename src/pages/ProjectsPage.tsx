@@ -17,7 +17,7 @@ function ProjectsPage() {
       <div id={projects.mainContainer}>
         <div className={projects.container}>
           <h2>{t("projects.title")}</h2>
-          {projectsData.map(({ id, name, imgPath, description, languages }) => (
+          {projectsData.map(({ id, name, imgPath, description, languages,link }) => (
             <div className={projects.projectCard} key={id}>
               <div className={projects.imgWrapper}>
                 <IKImage 
@@ -27,7 +27,7 @@ function ProjectsPage() {
                 />
               </div>
               <div className={projects.projectInfo}>
-                <a className={`${projects.projectName} primary-hover`} href="#">{name}</a>
+                <a className={`${projects.projectName} primary-hover`} href={link}>{name}</a>
                 <ul className={projects.devInfo}>
                   {languages.map((element : string, index : number) => (
                     <li key={`devInfoItem-${id}-${index}`}>{element}</li> // Use a combination of id and index to ensure a unique key
