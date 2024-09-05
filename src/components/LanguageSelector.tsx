@@ -4,8 +4,7 @@ import langSelector from "./languageSelector.module.css"
 
 const LanguageSelector: React.FC = () => {
   const { i18n } = useTranslation();
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
+  const [, setCurrentLanguage] = useState(i18n.language);
   
   // Elenco delle lingue supportate
   const languages = [ 
