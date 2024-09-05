@@ -22,7 +22,7 @@ const translationEN: Translation = {
   about: {
     title: "ABOUT ME",
     subtitle: "SOMETHING",
-    info: `I am a ${age} passionate about programming and computer science. I started programming in 2016 and currently focus primarily on designing and developing websites and web applications, ensuring that they are always responsive and computationally efficient. I am constantly dedicated to studying and improving my skills, tackling new challenges, and delving into technologies and topics to avoid compromises due to the complexity of ideas and their initial requirements.`
+    info: `I am a ${age}-year-old passionate about programming and computer science. I began programming in 2016 and currently focus primarily on designing and developing websites and web applications, ensuring they are always responsive and computationally efficient. I am consistently dedicated to studying and improving my skills, tackling new challenges, and exploring technologies and concepts to avoid limitations caused by the complexity of ideas and their initial requirements.`
   },
   dev: {
     title: "What I use:",
