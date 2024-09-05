@@ -44,12 +44,12 @@ function Contact() {
               </a>
             </li>
             <li className={contact.textItem}>
-              <a className="primary-hover" href="">
+              <a className="primary-hover" href="https://www.instagram.com/mrkooo_pics/" target="_blank" rel="noopener noreferrer">
                 Instagram
               </a>
             </li>
             <li className={contact.textItem}>
-              <a className="primary-hover" href="https://www.instagram.com/mrkooo_pics/" target="_blank" rel="noopener noreferrer">
+              <a className="primary-hover" href="">
                 Linkedin
               </a>
             </li>
