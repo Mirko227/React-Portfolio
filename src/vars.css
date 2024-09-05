@@ -1,0 +1,46 @@
+:root{
+    /* colors */
+    --background-clr: #0E0E11;
+    --text-clr: #E6E7F2;
+    --primary-accent: #f50041;
+    --secondary-accent: #fdf99f;
+    --tertiary-accent: #222338;
+    --primary-accent-hover: #f61a54;
+    --text-clr-hover: #c9cbe3;
+    --background-clr-nav: black;
+  
+    /* typography */
+    --font-family: "Montserrat", sans-serif;
+    
+    --fs-28-90: clamp(1.75rem, 0.975rem + 3.875vi, 5.625rem);
+    --fs-39-95: clamp(2.4375rem, 1.7375rem + 3.5vi, 5.9375rem);
+    --fs-13-20: clamp(0.8125rem, 0.725rem + 0.4375vi, 1.25rem);
+    --fs-16-20: clamp(1rem, 0.95rem + 0.25vi, 1.25rem);
+    --fs-16-25: clamp(1rem, 0.8875rem + 0.5625vi, 1.5625rem);
+    --fs-16-28: clamp(1rem, 0.85rem + 0.75vi, 1.75rem);
+    --fs-16-39: clamp(1rem, 0.7125rem + 1.4375vi, 2.4375rem);
+    --fs-20-39: clamp(1.25rem, 0.9124rem + 1.2709vi, 2.4375rem);
+    --fs-20-48: clamp(1.25rem, 0.9rem + 1.75vi, 3rem);
+    --fs-25-39: clamp(1.5625rem, 1.3875rem + 0.875vi, 2.4375rem);
+    --fs-25-48: clamp(1.5625rem, 1.275rem + 1.4375vw, 3rem);
+    --fs-25-61: clamp(1.5625rem, 1.1125rem + 2.25vi, 3.8125rem);
+    --fs-39-61: clamp(2.4375rem, 2.1625rem + 1.375vi, 3.8125rem);
+    --fs-48-95: clamp(3rem, 2.4125rem + 2.9375vi, 5.9375rem);
+    
+    /* spacing */
+    --zoom-padding: 3rem;
+    --container-w: 80%; 
+    --container-w-mobile: 85%; 
+    --container-max-w: 1536px;
+    --accToggle-height: 17vh;
+    --projectItem-padding: 3vw;
+    --nav-paddingTop: 1.5em;
+
+    /* breakpoints */
+    @custom-media --xs (width <= 576px);
+    @custom-media --sm (width <= 640px);
+    @custom-media --md (width <= 768px);
+    @custom-media --lg (width <= 1024px);
+    @custom-media --xl (width <= 1280px);
+  }
+  

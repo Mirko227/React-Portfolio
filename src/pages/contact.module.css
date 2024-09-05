@@ -1,0 +1,75 @@
+@import url("../vars.css");
+
+#main-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  /*calcolo considerata la navbar che essendo fixed non occupa spazio*/
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  font-size: var(--fs-20-39);
+  padding-top: calc(var(--nav-paddingTop) + 1em);
+  margin-block: 2rem;
+}
+
+.container > a {
+  color: #e6e7f2;
+  font-weight: 600;
+  font-size: var(--fs-39-95);
+  text-decoration-thickness: 0.07em;
+  text-align: center;
+  margin-bottom: 1.0105em;
+  text-decoration: underline;
+  text-decoration-thickness: 0.07em;
+}
+
+.container > p {
+  margin-bottom: 1.025em;
+  color: #fdf09c;
+  font-size: var(--fs-15-39);
+  text-transform: uppercase;
+}
+
+.contact-socials {
+  display: flex;
+  list-style: none;
+  font-size: var(--fs-25-39);
+  gap: 0.8205em;
+}
+
+.text-item a {
+  text-decoration: none;
+  color: #e6e7f2;
+  font-weight: 500;
+}
+
+.icon-item {
+  display: none;
+  width: 1.5em;
+}
+
+@media only screen and (--xs) {
+  .icon-item {
+    display: block;
+  }
+
+  .text-item {
+    display: none;
+  }
+
+  .container a span {
+    display: block;
+  }
+
+  .container a br {
+    display: none;
+  }
+}

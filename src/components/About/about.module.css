@@ -1,0 +1,40 @@
+@import url("../../vars.css");
+
+.container-about {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: var(--fs-16-39);
+    font-weight: 300;
+    width: var(--container-w);
+    max-width: var(--container-max-w);
+    padding-block: var(--zoom-padding);
+  }
+  
+  .container-about h2 span {
+    font-size: var(--fs-16-28);
+    color: #ffe285;
+    letter-spacing: 5px;
+    font-weight: 200;
+    display: block;
+    text-transform: uppercase;
+  }
+  
+  .container-about h2 {
+    font-size: var(--fs-39-95);
+    font-weight: 600;
+    margin-bottom: 0.3368em;
+    text-transform: uppercase;
+  }
+  
+  .container-about > p {
+    line-height: 130%;
+    text-align: left;
+    margin-bottom: 1.0256em;
+  }
+
+  @media screen and (--sm){
+    .container-about {
+      width: var(--container-w-mobile);
+    }
+  }

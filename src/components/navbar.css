@@ -1,0 +1,114 @@
+@import "../vars.css";
+
+.nav-header-wrapper{
+  display: flex;
+  gap: 1em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: var(--nav-paddingTop);
+  margin-right: 1.5em;
+  z-index: 2;
+  font-size: var(--fs-20-39);
+}
+
+#nav-container {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--background-clr-nav);
+  z-index: 3;
+  flex-direction: column;
+  clip-path: inset(100% 0 0 0);
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+  padding-block: var(--nav-paddingTop);
+  padding-right: 1.5em;
+  padding-left: 7.5%;
+  color: var(--text-clr);
+  font-size: var(--fs-20-39);
+}
+
+#nav-container::-webkit-scrollbar {
+  display: none;
+}
+
+nav .nav-socials {
+  font-size: var(--fs-16-39);
+  display: flex;
+  list-style-type: none;
+  gap: 0.8205em;
+}
+
+nav {
+  position: relative;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3368em;
+  font-size: var(--fs-39-95);
+  width: max-content;
+}
+
+nav .nav-pages {
+  display: flex;
+  list-style-type: none;
+  flex-direction: column;
+  gap: 0.0421em; /*da 4px*/
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+nav hr {
+  border-color: var(--text-clr);
+  border-style: solid;
+}
+
+.nav-btn {
+  font-size: var(--fs-20-39);
+  background: none;
+  border: 0;
+  color: var(--text-clr);
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  mix-blend-mode: difference;
+  font-weight: 500;
+}
+
+.active{
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.1em;
+  
+}
+
+#close-nav-btn {
+  align-self: end;
+  text-transform: capitalize;
+}
+
+#nav-container p {
+  font-size: var(--fs-13-20);
+  text-align: right;
+  width: 100%;
+}
+
+@media screen and (--lg) {
+  #nav-container p {
+    text-align: left;
+    margin-top: 5em;
+  }
+}
+
+@media screen and (--md) {
+  .nav-header-wrapper {
+    margin-top: 1.8em;
+    margin-right: 1.2em;
+  }
+  #nav-container {
+    padding-top: 1.8em;
+    padding-right: 1.2em;
+  }
+}

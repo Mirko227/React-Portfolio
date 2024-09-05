@@ -1,0 +1,17 @@
+@import url("../vars.css");
+
+#languageSelector{
+    appearance: none;
+    width: 100%;
+    border: none;
+    font-size: var(--fs-20-39); 
+    background-color: filter(difference);
+    text-align: center;
+    background-color: transparent;
+    color: var(--text-clr);
+}
+
+#languageSelector option{
+    color: black;
+    background-color: var(--text-clr);  
+}

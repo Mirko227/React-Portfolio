@@ -1,0 +1,84 @@
+@import url("../vars.css");
+
+#main-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow-y: scroll;
+}
+
+.container {
+  width: 80%;
+  max-width: var(--container-max-w);
+  width: var(--container-w);
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  font-size: var(--fs-20-39);
+  padding-top: calc(var(--nav-paddingTop) + 1em);
+  flex-grow: 1;
+}
+
+.container .normal-text {
+  font-size: var(--fs-16-39);
+  margin-bottom: 1.0256em;
+}
+
+.container h2 {
+  font-size: var(--fs-39-95);
+  font-weight: 600;
+  margin-bottom: 0.3368em;
+  text-transform: uppercase;
+}
+
+.resume-btn {
+  font-size: var(--fs-16-39);
+  background: none;
+  color: #e6e7f2;
+  border: 0.0513em solid #ffe285;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5em;
+  gap: 0.6153em;
+  font-weight: 500;
+  transition-property: color, background;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+
+.resume-btn:hover {
+  color: #0e0e11;
+  background: #ffe285;
+}
+.resume-btn:focus {
+  color: #0e0e11;
+  background: #ffe285;
+}
+
+.resume-btn svg {
+  width: 1em;
+  fill: #e6e7f2;
+  transition: fill 0.3s ease-in;
+}
+
+.resume-btn:hover > svg {
+  fill: #0e0e11;
+}
+.resume-btn:focus > svg {
+  fill: #0e0e11;
+}
+
+@media screen and (--sm) {
+  .container {
+    width: 85%;
+  }
+  .container {
+    margin-bottom: 0;
+  }
+}

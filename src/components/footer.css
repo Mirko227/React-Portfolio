@@ -1,0 +1,8 @@
+footer {
+    width: 100%;
+    font-size: var(--fs-16-20);
+    text-align: center;
+    padding: 1.8em;
+    background-color: var(--text-clr);
+    color: var(--background-clr);
+  }
