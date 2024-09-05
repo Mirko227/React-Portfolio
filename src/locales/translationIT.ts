@@ -120,7 +120,7 @@ const translationIT: Translation = {
         imgPath: `${folderName}/developer-portfolio.jpg`,
         languages: ["HTML, CSS, CSS Modules, PostCSS, React, Typescript, GSAP, Vite, ImageKit"],
         description: "Il mio portfolio personale.",
-        link: "https://webchat-gis8.onrender.com/"
+        link: "https://github.com/Mirko227/React-Portfolio"
       },
     ],
   },
