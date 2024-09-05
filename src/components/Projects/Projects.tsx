@@ -135,7 +135,7 @@ function Projects() {
               ref={(el) => addToRefs(el, itemsRefs)}
             >
               <figure>
-                <a className={projects.projectName} href={link}>
+                <a className={projects.projectName} href={link} target="_blank" rel="noopener noreferrer">
                   {name}
                 </a>
                 <IKImage urlEndpoint={imagekitConfig.urlEndpoint} path={imgPath} alt={name}/>

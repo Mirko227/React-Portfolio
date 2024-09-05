@@ -27,7 +27,7 @@ function ProjectsPage() {
                 />
               </div>
               <div className={projects.projectInfo}>
-                <a className={`${projects.projectName} primary-hover`} href={link}>{name}</a>
+                <a className={`${projects.projectName} primary-hover`} href={link} target="_blank" rel="noopener noreferrer">{name}</a>
                 <ul className={projects.devInfo}>
                   {languages.map((element : string, index : number) => (
                     <li key={`devInfoItem-${id}-${index}`}>{element}</li> // Use a combination of id and index to ensure a unique key
