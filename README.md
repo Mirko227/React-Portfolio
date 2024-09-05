@@ -1,3 +1,11 @@
+# React Web Developer Portfolio Mirko Bellopede 2024
+
+My personal portfolio built with HTML, CSS, CSS Modules, PostCSS, React, TypeScript, GSAP, Vite, and ImageKit.
+
+Check out my portfolio: [link]
+
+![developer-portfolio](https://github.com/user-attachments/assets/2118403e-a149-4c28-859a-a83171e1abb7)
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -28,3 +36,4 @@ export default {
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
