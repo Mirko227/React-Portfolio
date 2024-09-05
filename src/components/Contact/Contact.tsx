@@ -18,7 +18,7 @@ function Contact() {
               {t("contact.home.title")} <br />
               {t("contact.home.titlebr")}
             </h2>
-            <a className="hover-trailer" href="mailto:loremipsum@email.com">
+            <a className="hover-trailer" href="mailto:dev@mirkobellopede.com">
               <span>DEV@</span>
               <span>MIRKO</span>
               <br />

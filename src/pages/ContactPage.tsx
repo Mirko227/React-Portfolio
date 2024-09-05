@@ -11,7 +11,7 @@ function ContactPage() {
     <div id={contactPage.mainContainer}>
         <div className={contactPage.container}>
             <p>{t("contact.contactPage.title")}</p>
-            <a className="hover-trailer" href=""><span>DEV@</span>MIRKO<span></span><br /><span>BELLOPE</span>DE.COM</a>
+            <a className="hover-trailer" href="mailto:dev@mirkobellopede.com"><span>DEV@</span>MIRKO<span></span><br /><span>BELLOPE</span>DE.COM</a>
             <ul className={contactPage.contactSocials}>
                
               <li className={contactPage.iconItem}>
