@@ -24,9 +24,9 @@ function ContactPage() {
                 <a href=""><img src={githubSvg} alt=""/></a>
               </li>
 
-                <li className={contactPage.textItem}><a className={"primary-hover"} href="">Instagram</a></li>
+                <li className={contactPage.textItem}><a className={"primary-hover"} href="https://www.instagram.com/mrkooo_pics/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                 <li className={contactPage.textItem}><a className={"primary-hover"} href="">Linkedin</a></li>
-                <li className={contactPage.textItem}><a className={"primary-hover"} href="">Github</a></li>
+                <li className={contactPage.textItem}><a className={"primary-hover"} href="https://github.com/Mirko227" target="_blank" rel="noopener noreferrer">Github</a></li>
               </ul>
         </div>
        <Footer />
