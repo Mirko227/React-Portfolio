@@ -24,7 +24,7 @@ const translationIT: Translation = {
   about: {
     title: "Su di me",
     subtitle: "Qualcosa",
-    info: `Sono un ragazzo di ${age} anni appassionato di programmazione e informatica. Ho iniziato a programmare nel 2016 e attualmente mi dedico principalmente alla progettazione e sviluppo di siti web e web app, assicurandomi che siano sempre responsivi ed efficienti. Mi impegno costantemente nello studio e nel miglioramento delle mie competenze, affrontando nuovi problemi e approfondendo tecnologie per evitare compromessi rispetto alle idee iniziali.`
+    info: `Sono un ragazzo di ${age} anni appassionato di programmazione e informatica. Ho iniziato a programmare nel 2016 e attualmente mi dedico principalmente alla progettazione e sviluppo di siti web e web app, assicurandomi che siano sempre responsivi ed efficienti. Mi impegno costantemente nello studio e nel miglioramento delle mie competenze, affrontando nuovi problemi e approfondendo tecnologie per evitare sempre compromessi rispetto alle aspettative iniziali.`
   },
   dev: {
     title: "Cosa uso:",
