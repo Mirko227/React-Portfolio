@@ -1,11 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import langSelector from "./languageSelector.module.css"
 
 const LanguageSelector: React.FC = () => {
   const { i18n } = useTranslation();
-  // Utilizza useRef per mantenere il valore corrente della lingua
-  const currentLanguageRef = useRef(i18n.language);
+  
+  // Usa useState per mantenere il valore corrente della lingua
+  const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
   
   // Elenco delle lingue supportate
   const languages = [ 
@@ -17,25 +18,14 @@ const LanguageSelector: React.FC = () => {
   const changeLang = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedLanguage = event.target.value;
     i18n.changeLanguage(selectedLanguage);
-    // Aggiorna il valore di useRef
-    currentLanguageRef.current = selectedLanguage;
+    setCurrentLanguage(selectedLanguage);
     // Salva la lingua selezionata nel localStorage
     localStorage.setItem('language', selectedLanguage);
     event.target.blur();
   };
 
-  // Recupera la lingua dal localStorage al caricamento dell'app
-  useEffect(() => {
-    const savedLanguage = localStorage.getItem('language');
-    if (savedLanguage && savedLanguage !== i18n.language) {
-      i18n.changeLanguage(savedLanguage);
-      // Aggiorna il valore di useRef
-      currentLanguageRef.current = savedLanguage;
-    }
-  }, [i18n]);
-
   return (
-      <select id={langSelector.languageSelector} value={i18n.language} onChange={changeLang}>
+      <select id={langSelector.languageSelector} value={currentLanguage} onChange={changeLang}>
         {/* Mostra tutte le lingue */}
         {languages.map(lang => (
           <option key={lang.code} value={lang.code}>
