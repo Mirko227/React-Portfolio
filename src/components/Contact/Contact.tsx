@@ -29,17 +29,17 @@ function Contact() {
 
           <ul className={contact.contactSocials}>
             <li className={contact.iconItem}>
-              <a href="">
+              <a href="https://www.instagram.com/mrkooo_pics/" target="_blank" rel="noopener noreferrer">
                 <img src={instagramSvg} alt="" />
               </a>
             </li>
             <li className={contact.iconItem}>
-              <a href="">
+              <a href="https://www.linkedin.com/in/mirko-bellopede-025954327/" target="_blank" rel="noopener noreferrer">
                 <img src={linkedinSvg} alt="" />
               </a>
             </li>
             <li className={contact.iconItem}>
-              <a href="">
+              <a href="https://github.com/Mirko227" target="_blank" rel="noopener noreferrer">
                 <img src={githubSvg} alt="" />
               </a>
             </li>
@@ -49,7 +49,7 @@ function Contact() {
               </a>
             </li>
             <li className={contact.textItem}>
-              <a className="primary-hover" href="">
+              <a className="primary-hover" href="https://www.linkedin.com/in/mirko-bellopede-025954327/" target="_blank" rel="noopener noreferrer">
                 Linkedin
               </a>
             </li>

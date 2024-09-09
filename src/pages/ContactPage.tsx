@@ -15,17 +15,17 @@ function ContactPage() {
             <ul className={contactPage.contactSocials}>
                
               <li className={contactPage.iconItem}>
-                <a href=""><img src={instagramSvg} alt=""/></a>
+                <a href="https://www.instagram.com/mrkooo_pics/" target="_blank" rel="noopener noreferrer"><img src={instagramSvg} alt=""/></a>
               </li>
               <li className={contactPage.iconItem}>
-                <a href=""><img src={linkedinSvg} alt=""/></a>
+                <a href="https://www.linkedin.com/in/mirko-bellopede-025954327/" target="_blank" rel="noopener noreferrer"><img src={linkedinSvg} alt=""/></a>
               </li>
               <li className={contactPage.iconItem}>
-                <a href=""><img src={githubSvg} alt=""/></a>
+                <a href="https://github.com/Mirko227" target="_blank" rel="noopener noreferrer"><img src={githubSvg} alt=""/></a>
               </li>
 
                 <li className={contactPage.textItem}><a className={"primary-hover"} href="https://www.instagram.com/mrkooo_pics/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                <li className={contactPage.textItem}><a className={"primary-hover"} href="">Linkedin</a></li>
+                <li className={contactPage.textItem}><a className={"primary-hover"} href="https://www.linkedin.com/in/mirko-bellopede-025954327/" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
                 <li className={contactPage.textItem}><a className={"primary-hover"} href="https://github.com/Mirko227" target="_blank" rel="noopener noreferrer">Github</a></li>
               </ul>
         </div>
