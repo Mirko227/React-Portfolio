@@ -10,6 +10,7 @@
   margin-right: 1.5em;
   z-index: 2;
   font-size: var(--fs-20-39);
+  mix-blend-mode: difference;
 }
 
 #nav-container {
@@ -73,7 +74,6 @@ nav hr {
   color: var(--text-clr);
   letter-spacing: -0.02em;
   cursor: pointer;
-  mix-blend-mode: difference;
   font-weight: 500;
 }
 
