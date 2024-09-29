@@ -1,12 +1,14 @@
 @import url("../vars.css");
 
 .main-container {
+  height: 100%;
   display: flex;
   flex-direction: column;
   margin: calc();
   font-size: 2.4375rem;
   padding-top: calc(2rem + (var(--nav-paddingTop) + 1em));
   font-weight: 300;
+  overflow-y: scroll;
 }
 
 .container {
