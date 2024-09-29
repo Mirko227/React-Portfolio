@@ -144,7 +144,7 @@ const translationEN: Translation = {
       "This page describes the management of the website by Mirko Bellopede regarding the processing of personal data of users who visit it. This information is provided in accordance with EU Regulation 2016/679 (GDPR) and Italian laws on personal data protection.",
     dataControllerTitle: "Data Controller",
     dataControllerInfo:
-      "The data controller is: Mirko Bellopede. Email: mirkobellopede.dev@gmail.com",
+      "The data controller is: Mirko Bellopede. <br> Email: mirkobellopede.dev@gmail.com",
     dataCollectedTitle: "Type of Data Collected",
     dataCollectedInfo:
       "The website does not automatically collect personal data. We do not use profiling cookies or third-party tracking tools like Google Analytics. There are no contact forms or tools for direct data collection.",

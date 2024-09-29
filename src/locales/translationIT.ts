@@ -144,7 +144,7 @@ const translationIT: Translation = {
       "Questa pagina descrive le modalità di gestione del sito web di Mirko Bellopede in riferimento al trattamento dei dati personali degli utenti che lo consultano. La presente informativa è resa ai sensi del Regolamento UE 2016/679 (GDPR) e delle leggi italiane in materia di protezione dei dati personali.",
     dataControllerTitle: "Titolare del Trattamento dei Dati",
     dataControllerInfo:
-      "Il titolare del trattamento dei dati personali è: Mirko Bellopede. Email: mirkobellopede.dev@gmail.com",
+      "Il titolare del trattamento dei dati personali è: Mirko Bellopede. <br> Email: mirkobellopede.dev@gmail.com",
     dataCollectedTitle: "Tipologia di dati raccolti",
     dataCollectedInfo:
       "Il sito non raccoglie dati personali automaticamente. Non utilizziamo cookie di profilazione, né strumenti di tracciamento di terze parti come Google Analytics. Non sono presenti form di contatto, strumenti per la raccolta diretta di informazioni.",
