@@ -84,9 +84,9 @@ const Navbar = function Navbar()
             </ul>
             <hr />
             <ul className="nav-socials">
-              <li><a className="primary-hover" href="">Instagram</a></li>
-              <li><a className="primary-hover" href="">Linkedin</a></li>
-              <li><a className="primary-hover" href="">Github</a></li>
+              <li><a className="primary-hover" href="https://www.instagram.com/mrkooo_pics/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li><a className="primary-hover" href="https://www.linkedin.com/in/mirko-bellopede-025954327/" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+              <li><a className="primary-hover" href="https://github.com/Mirko227" target="_blank" rel="noopener noreferrer">Github</a></li>
             </ul>
           </nav>
           <p>
