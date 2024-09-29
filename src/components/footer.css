@@ -1,8 +1,35 @@
+@import url("../vars.css");
+
 footer {
-    width: 100%;
-    font-size: var(--fs-16-20);
-    text-align: center;
-    padding: 1.8em;
-    background-color: var(--text-clr);
-    color: var(--background-clr);
+  width: 100%;
+  background-color: var(--text-clr);
+  color: var(--background-clr);
+  display: flex;
+  justify-content: center;
+
+}
+
+.footer-container {
+  padding-block: 1.8em;
+  font-size: var(--fs-16-20);
+  color: var(--background-clr);
+  display: flex;
+  max-width: var(--container-max-w);
+  width: var(--container-w);
+  gap: 2em;
+  align-items: center;
+}
+
+@media screen and (--sm) {
+  .footer-container {
+    width: var(--container-w-mobile);
   }
+}
+.footer-link {
+  color: var(--background-clr);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  text-decoration: underline var(--background-clr);
+}

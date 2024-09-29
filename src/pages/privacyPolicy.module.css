@@ -1,0 +1,39 @@
+@import url("../vars.css");
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin: calc();
+  font-size: 2.4375rem;
+  padding-top: calc(2rem + (var(--nav-paddingTop) + 1em));
+  font-weight: 300;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: var(--container-max-w);
+  width: var(--container-w);
+  font-size: var(--fs-16-20);
+  margin-bottom: 3em;
+}
+
+@media screen and (--md) {
+  .container {
+    width: var(--container-w-mobile);
+  }
+}
+
+.privacy-h1{
+  font-size: 2.4375rem;
+  margin-bottom: 1.025em;
+}
+
+.privacy-h2 {
+  font-size: 1.5625rem;
+  margin-top: 1.28em;
+}
+
+.container li , .container p{
+    font-size: var(--fs-16-20);
+    margin-bottom: 1em;
+}

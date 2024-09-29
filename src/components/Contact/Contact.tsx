@@ -4,7 +4,8 @@ import Footer from "../Footer";
 import instagramSvg from "../../assets/svgs/instagram.svg";
 import linkedinSvg from "../../assets/svgs/linkedin.svg";
 import githubSvg from "../../assets/svgs/github.svg";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
+
 
 function Contact() {
   const { t } = useTranslation();
@@ -15,8 +16,9 @@ function Contact() {
         <div className={contact.contactInfo}>
           <div className={contact.contactEmail}>
             <h2>
-              {t("contact.home.title")} <br />
-              {t("contact.home.titlebr")}
+              <Trans i18nKey="contact.home.title">
+              {t("contact.home.title")}
+              </Trans>
             </h2>
             <a className="hover-trailer" href="mailto:dev@mirkobellopede.com" target="_blank" rel="noopener noreferrer">
               <span>DEV@</span>

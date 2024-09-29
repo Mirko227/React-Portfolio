@@ -35,6 +35,7 @@
     --accToggle-height: 17vh;
     --projectItem-padding: 3vw;
     --nav-paddingTop: 1.5em;
+    --nav-paddingTop-mobile: 1.8em;
 
     /* breakpoints */
     @custom-media --xs (width <= 576px);

@@ -7,6 +7,28 @@ export interface Project {
   link: string;
 }
 
+interface PrivacyPolicyTranslations {
+  title: string;
+  intro: string;
+  dataControllerTitle: string;
+  dataControllerInfo: string;
+  dataCollectedTitle: string;
+  dataCollectedInfo: string;
+  dataInteraction: string;
+  socialLinks: string;
+  personalProjects: string;
+  googleDrive: string;
+  cookiePolicyTitle: string;
+  cookiePolicyInfo: string;
+  purposeOfProcessingTitle: string;
+  purposeOfProcessingInfo: string;
+  emailInteractionNote: string;
+  rightsTitle: string;
+  rightsInfo: string;
+  changesPolicyTitle: string;
+  changesPolicyInfo: string;
+}
+
 export interface AccItem {
   id: string;
   number: string;
@@ -43,10 +65,11 @@ export interface Translation {
   contact: {
     home: {
       title: string
-      titlebr: string
     },
     contactPage: {
       title: string
     },
-  }
+  },
+  privacyPolicy: PrivacyPolicyTranslations;
 }
+

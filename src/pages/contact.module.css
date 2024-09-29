@@ -20,6 +20,12 @@
   margin-block: 2rem;
 }
 
+@media screen and (--md){
+  .container {
+    padding-top: calc(var(--nav-paddingTop-mobile) + 1em);
+  }
+}
+
 .container > a {
   color: #e6e7f2;
   font-weight: 600;

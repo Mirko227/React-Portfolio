@@ -7,7 +7,8 @@ import About from "./pages/AboutPage.tsx";
 import App from "./App.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import './i18n';
+import "./i18n";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 
 const router = createBrowserRouter([
   {
@@ -28,11 +29,17 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About/>,
+        element: <About />,
+      },
+      {
+        path: "/privacypolicy",
+        element: <PrivacyPolicy />,
       },
     ],
   },
 ]);
+
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <RouterProvider router={router} />

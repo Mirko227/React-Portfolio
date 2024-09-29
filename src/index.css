@@ -40,6 +40,10 @@
     text-decoration: none;
   }
 
+  p{
+    text-wrap: pretty;
+  }
+
 
   /* scrollbar styling */
 

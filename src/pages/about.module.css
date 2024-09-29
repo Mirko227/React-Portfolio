@@ -23,6 +23,12 @@
   flex-grow: 1;
 }
 
+@media screen and (--md){
+  .container {
+    padding-top: calc(var(--nav-paddingTop-mobile) + 1em);
+  }
+}
+
 .container .normal-text {
   font-size: var(--fs-16-39);
   margin-bottom: 1.0256em;

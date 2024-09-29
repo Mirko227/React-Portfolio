@@ -1,8 +1,6 @@
 import projects from "./projects.module.css";
 import Footer from "../components/Footer";
 import { useTranslation } from "react-i18next";
-import { IKImage } from "imagekitio-react";
-import imagekitConfig from "../imagekitConfig";
 import { Project } from "../locales/interfaces";
 // Define the types for project data
 
@@ -22,11 +20,7 @@ function ProjectsPage() {
               <div className={projects.projectCard} key={id}>
                 <div className={projects.imgWrapper}>
                   <a href={link} target="_blank" rel="noopener noreferrer">
-                    <IKImage
-                      urlEndpoint={imagekitConfig.urlEndpoint}
-                      path={imgPath}
-                      alt={name}
-                    />
+                  <img src={imgPath} alt={name} />
                   </a>
                 </div>
                 <div className={projects.projectInfo}>

@@ -3,8 +3,6 @@ import gsap from "gsap";
 import projects from "./projects.module.css";
 import home from "../../pages/home.module.css";
 import { addToRefs, getCSSVariableValue } from "../../utils";
-import { IKImage } from 'imagekitio-react';
-import imagekitConfig from "../../imagekitConfig";
 import { useTranslation } from "react-i18next";
 import { Project } from "../../locales/interfaces";
 
@@ -138,7 +136,7 @@ function Projects() {
                 <a className={projects.projectName} href={link} target="_blank" rel="noopener noreferrer">
                   {name}
                 </a>
-                <IKImage urlEndpoint={imagekitConfig.urlEndpoint} path={imgPath} alt={name}/>
+                <img src={imgPath} alt={name} />
               </figure>
             </div>
           ))}
