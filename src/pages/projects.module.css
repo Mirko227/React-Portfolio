@@ -33,12 +33,13 @@
   width: 80%;
   max-width: 1536px;
   font-size: var(--fs-20-39);
-  padding-top: calc(1em + (var(--nav-paddingTop) + 1em));
+  padding-top: var(--container-paddingTop);
+  padding-bottom: var(--container-paddingBottom);
 }
 
 @media screen and (--md){
   .container {
-    padding-top: calc(var(--nav-paddingTop-mobile) + 1em);
+    padding-top: var(--container-paddingTop-mobile);
   }
 }
 
@@ -83,12 +84,6 @@
   }
   .img-wrapper img {
     aspect-ratio: 1/1;
-  }
-}
-
-@media screen and (--md) {
-  .container {
-    padding-top: calc(1rem + (var(--nav-paddingTop) + 2em));
   }
 }
 

@@ -4,9 +4,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  margin: calc();
-  font-size: 2.4375rem;
-  padding-top: calc(2rem + (var(--nav-paddingTop) + 1em));
+
   font-weight: 300;
   overflow-y: scroll;
 }
@@ -15,13 +13,14 @@
   margin: 0 auto;
   max-width: var(--container-max-w);
   width: var(--container-w);
-  font-size: var(--fs-16-20);
-  margin-bottom: 3em;
+  font-size: var(--fs-20-39);
+  padding-top: calc(1em + (var(--nav-paddingTop) + 1em));
+  padding-bottom: var(--container-paddingBottom);
 }
 
-@media screen and (--md) {
+@media screen and (--md){
   .container {
-    width: var(--container-w-mobile);
+    padding-top: calc(1em + (var(--nav-paddingTop) + 2.5em));
   }
 }
 
