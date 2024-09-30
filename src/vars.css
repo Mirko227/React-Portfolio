@@ -37,7 +37,7 @@
     --nav-paddingTop: 1.5em;
     --nav-paddingTop-mobile: 1.8em;
     --container-paddingTop: calc(1em + (var(--nav-paddingTop) + 1em));
-    --container-paddingTop-mobile: calc(1em + (var(--nav-paddingTop) + 2.5em));
+    --container-paddingTop-mobile: calc(1em + (var(--nav-paddingTop) + 3em));
     --container-paddingBottom: 2.5em;
 
     /* breakpoints */

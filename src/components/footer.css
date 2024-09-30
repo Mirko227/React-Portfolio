@@ -6,18 +6,17 @@ footer {
   color: var(--background-clr);
   display: flex;
   justify-content: center;
-
 }
 
 .footer-container {
   padding-block: 1.8em;
   font-size: var(--fs-16-20);
   color: var(--background-clr);
-  display: flex;
   max-width: var(--container-max-w);
   width: var(--container-w);
   gap: 2em;
   align-items: center;
+  display: flex;
 }
 
 @media screen and (--sm) {
@@ -25,8 +24,30 @@ footer {
     width: var(--container-w-mobile);
   }
 }
+
+.footer-container > p {
+ display: inline;
+ margin-right: 1em;
+}
+
+.footer-container > p br{
+ display: none;
+}
+
+.footer-link > br {
+  display: none;
+}
+
+
 .footer-link {
   color: var(--background-clr);
+}
+
+@media screen and (--sm) {
+  .footer-container > p br,
+  .footer-link > br {
+    display: block;
+  }
 }
 
 .footer-link:hover,
