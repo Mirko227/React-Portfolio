@@ -11,9 +11,6 @@
 }
 
 .container {
-  width: 80%;
-  max-width: var(--container-max-w);
-  width: var(--container-w);
   font-weight: 300;
   display: flex;
   flex-direction: column;
@@ -81,11 +78,3 @@
   fill: #0e0e11;
 }
 
-@media screen and (--sm) {
-  .container {
-    width: 85%;
-  }
-  .container {
-    margin-bottom: 0;
-  }
-}

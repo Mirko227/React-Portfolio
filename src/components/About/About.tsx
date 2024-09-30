@@ -7,7 +7,7 @@ function About() {
   const { t } = useTranslation();
   return (
     <section className={`${home.section} grid-center`}>
-      <div className={about.containerAbout}>
+      <div className={`${about.containerAbout} container` }>
         <h2>
             {t("about.title")}
         </h2>

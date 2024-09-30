@@ -1,8 +1,6 @@
 @import "../../vars.css";
 
 .container-dev {
-    width: var(--container-w);
-    max-width: var(--container-max-w);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -76,10 +74,4 @@
   .toggle-icon{
     font-size: var(--fs-20-39);
     width: 1.2em;
-  }
-
-  @media screen and (--sm){
-    .container-dev {
-      width: var(--container-w-mobile);
-    }
   }

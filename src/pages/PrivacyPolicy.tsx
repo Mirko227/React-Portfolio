@@ -8,7 +8,7 @@ function ProjectsPage() {
   return (
     <>
       <div className={privacy.mainContainer}>
-        <div className={privacy.container}>
+        <div className={`${privacy.container} container container-navOffset`}>
           <h1 className={privacy.privacyH1}>{t("privacyPolicy.title")}</h1>
           <p><Trans i18nKey={"privacyPolicy.intro"}></Trans></p>
 

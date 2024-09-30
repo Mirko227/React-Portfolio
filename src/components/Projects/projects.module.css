@@ -9,8 +9,6 @@
 .container-projects {
   position: relative;
   overflow: hidden;
-  width: var(--container-w);
-  max-width: var(--container-max-w);
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -174,11 +172,6 @@
   .project-item {
     width: calc(80vw / 1.5);
     min-width: 280px;
-  }
-
-  .container-projects {
-    width: 100%;
-    margin-left: 7.5%;
   }
 
   #projects-gallery::before {

@@ -12,7 +12,7 @@ function Contact() {
 
   return (
     <section className={`${home.section} ${contact.contactSection}`}>
-      <div className={contact.containerContact}>
+      <div className={`${contact.containerContact} container`}>
         <div className={contact.contactInfo}>
           <div className={contact.contactEmail}>
             <h2>

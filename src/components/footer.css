@@ -12,17 +12,9 @@ footer {
   padding-block: 1.8em;
   font-size: var(--fs-16-20);
   color: var(--background-clr);
-  max-width: var(--container-max-w);
-  width: var(--container-w);
   gap: 2em;
   align-items: center;
   display: flex;
-}
-
-@media screen and (--sm) {
-  .footer-container {
-    width: var(--container-w-mobile);
-  }
 }
 
 .footer-container > p br{

@@ -30,8 +30,6 @@
 }
 
 .container {
-  width: 80%;
-  max-width: 1536px;
   font-size: var(--fs-20-39);
   padding-top: var(--container-paddingTop);
   padding-bottom: var(--container-paddingBottom);

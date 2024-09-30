@@ -13,7 +13,7 @@ function ProjectsPage() {
   return (
     <>
       <div id={projects.mainContainer}>
-        <div className={projects.container}>
+        <div className={`${projects.container} container container-navOffset`}>
           <h2>{t("projects.title")}</h2>
           {projectsData.map(
             ({ id, name, imgPath, description, languages, link }) => (

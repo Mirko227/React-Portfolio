@@ -130,7 +130,7 @@ function Dev() {
 
   return (
     <section className={`${home.section} grid-center`}>
-      <div className={dev.containerDev}>
+      <div className={`${dev.containerDev} container`}>
         <h2>{t("dev.title")}</h2>
         <div className={dev.wrapperDev} ref={container}>
           {devData.map(({ id, number, title, ulList }) => (

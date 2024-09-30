@@ -111,7 +111,7 @@ function Projects() {
 
   return (
     <section className={`${home.section} ${projects.projectsSection}`}>
-      <div className={projects.containerProjects}>
+      <div className={`${projects.containerProjects} container`}>
         <h2>
             {t("projects.title")}
         </h2>

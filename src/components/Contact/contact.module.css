@@ -8,8 +8,6 @@
 
 .container-contact {
   display: flex;
-  width: var(--container-w);
-  max-width: var(--container-max-w);
   flex-direction: column;
   flex-grow: 1;
   min-height: 100%;
@@ -118,8 +116,3 @@
   }
 }
 
-@media screen and (--sm) {
-  .container-contact {
-    width: var(--container-w-mobile);
-  }
-}

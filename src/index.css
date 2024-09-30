@@ -48,6 +48,17 @@
     text-wrap: pretty;
   }
 
+  .container {
+    width: var(--container-w);
+    max-width: var(--container-max-w);
+  }
+
+  @media screen and (--md){
+    .container {
+      width: var(--container-w-mobile);
+    }
+  }
+  
 
   /* scrollbar styling */
 

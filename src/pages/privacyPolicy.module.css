@@ -11,8 +11,6 @@
 
 .container {
   margin: 0 auto;
-  max-width: var(--container-max-w);
-  width: var(--container-w);
   font-size: var(--fs-20-39);
   padding-top: calc(1em + (var(--nav-paddingTop) + 1em));
   padding-bottom: var(--container-paddingBottom);
@@ -21,12 +19,6 @@
 @media screen and (--md){
   .container {
     padding-top: var(--container-paddingTop-mobile);
-  }
-}
-
-@media screen and (--sm) {
-  .container {
-    width: var(--container-w-mobile);
   }
 }
 
