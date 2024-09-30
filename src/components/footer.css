@@ -25,11 +25,6 @@ footer {
   }
 }
 
-.footer-container > p {
- display: inline;
- margin-right: 1em;
-}
-
 .footer-container > p br{
  display: none;
 }
