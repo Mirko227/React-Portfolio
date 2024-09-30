@@ -31,7 +31,7 @@ function ProjectsPage() {
           <h2 className={privacy.privacyH2}>{t("privacyPolicy.purposeOfProcessingTitle")}</h2>
           <p>{t("privacyPolicy.purposeOfProcessingInfo")}</p>
 
-          <p>{t("privacyPolicy.emailInteractionNote")}</p>
+          <p><Trans i18nKey={"privacyPolicy.emailInteractionNote"}></Trans></p>
 
           <h2 className={privacy.privacyH2}>{t("privacyPolicy.rightsTitle")}</h2>
           <p>{t("privacyPolicy.rightsInfo")}</p>
