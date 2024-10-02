@@ -5,7 +5,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   overflow-y: scroll;
   min-height: 100dvh;
 }
@@ -19,6 +18,7 @@
   font-size: var(--fs-20-39);
   padding-top: calc(var(--nav-paddingTop) + 1em);
   flex-grow: 1;
+   margin-block: 3rem;
 }
 
 @media screen and (--md){
