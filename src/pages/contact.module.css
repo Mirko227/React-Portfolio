@@ -17,7 +17,7 @@
   flex-grow: 1;
   font-size: var(--fs-20-39);
   padding-top: calc(var(--nav-paddingTop) + 1em);
-  margin-block: 3rem;
+  margin-block: var(--zoom-padding);
 }
 
 @media screen and (--md){
@@ -27,7 +27,7 @@
 }
 
 .container > a {
-  color: #e6e7f2;
+  color: var(--text-clr);
   font-weight: 600;
   font-size: var(--fs-39-95);
   text-decoration-thickness: 0.07em;
@@ -39,7 +39,7 @@
 
 .container > p {
   margin-bottom: 1.025em;
-  color: #fdf09c;
+  color: var(--secondary-accent);
   font-size: var(--fs-15-39);
   text-transform: uppercase;
 }
@@ -53,7 +53,7 @@
 
 .text-item a {
   text-decoration: none;
-  color: #e6e7f2;
+  color: var(--text-clr);
   font-weight: 500;
 }
 

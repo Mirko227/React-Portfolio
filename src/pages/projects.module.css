@@ -100,7 +100,7 @@
 }
 
 .dev-info {
-  color: #fdf09c;
+  color: var(--secondary-accent);
   list-style: none;
   display: flex;
   font-size: var(--fs-16-20);
