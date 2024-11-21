@@ -1,78 +1,145 @@
-import React, { useState, useRef, RefObject } from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 import projects from "./projects.module.css";
+import home from "../../pages/home.module.css";
+import { addToRefs, getCSSVariableValue } from "../../utils";
 import { useTranslation } from "react-i18next";
-
-// Definizione dell'interfaccia per gli oggetti projectsInfo
-interface projectsInfoItem {
-  title: string;
-  description: string;
-}
+import { Project } from "../../locales/interfaces";
 
 function Projects() {
-  // Stato attivo con un numero o null
-  const [active, setActive] = useState<number | null>(null);
   const { t } = useTranslation();
+  const projectsData: Project[] = t("projects.data", { returnObjects: true });
 
-  // Ottieni projectsInfo come array di projectsInfoItem da t
-  const projectsInfo: projectsInfoItem[] = t("projects.projectsInfo", { returnObjects: true });
+  const projectGalleryRef = useRef<HTMLDivElement>(null);
+  const itemsRefs = useRef<HTMLDivElement[]>([]);
+  const itemWidth = useRef(0);
+  const wrapWidth = useRef(0);
+  const requestId = useRef<number | null>(null);
+  const touchStart = useRef(0);
+  const isDragging = useRef(false);
+  const y = useRef(0);
+  const scrollX = useRef(0);
+  const speed = 2.5;
+  const friction = 0.05; // più è alto più c'è frizione
 
-  // Ref per i contenuti dell'accordion, array di RefObject HTMLDivElement
-  const contentRef = useRef<Array<RefObject<HTMLDivElement>>>(
-    projectsInfo.map(() => React.createRef())
-  );
+  const paddingOffset = getCSSVariableValue("--projectItem-padding").trim();
 
-  // Gestione del toggle
-  const handleToggle = (id: number) => {
-    setActive(active === id ? null : id);
+  const lerp = (v0: number, v1: number, t: number) => {
+    return v0 * (1 - t) + v1 * t;
   };
 
+  const updateWidth = () => {
+    const width = itemsRefs.current[0].clientWidth;
+    itemWidth.current = width;
+    wrapWidth.current = itemsRefs.current.length * width;
+  };
+
+  const dispose = (scroll: number) => {
+    gsap.set(itemsRefs.current, {
+      x: (i) => {
+        return i * itemWidth.current + scroll;
+      },
+      modifiers: {
+        x: (x: string) => {
+          const s = gsap.utils.wrap(
+            -itemWidth.current,
+            wrapWidth.current - itemWidth.current,
+            parseInt(x)
+          );
+          return `calc(${s}px - ${paddingOffset})`;
+        },
+      },
+    });
+  };
+
+  useEffect(() => {
+    if (itemsRefs.current.length > 0) {
+      updateWidth();
+    }
+  }, []);
+
+  useEffect(() => {
+    dispose(0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleTouchStart = (e: React.TouchEvent | React.MouseEvent) => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    const startX = e.clientX || e.touches[0].clientX;
+    touchStart.current = startX;
+    isDragging.current = true;
+    projectGalleryRef.current!.classList.add(projects.isDragging);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent | React.MouseEvent) => {
+    if (isDragging.current == false) return;
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    const moveX = e.clientX || e.touches[0].clientX;
+    scrollX.current += (moveX - touchStart.current) * speed;
+    touchStart.current = moveX;
+  };
+
+  const handleTouchEnd = () => {
+    isDragging.current = false;
+    projectGalleryRef.current!.classList.remove(projects.isDragging);
+  };
+
+  const render = () => {
+    y.current = lerp(y.current, scrollX.current, friction);
+    dispose(y.current);
+    requestId.current = requestAnimationFrame(render);
+  };
+
+  useEffect(() => {
+    requestId.current = requestAnimationFrame(render);
+    return () => {
+      if (requestId.current) {
+        cancelAnimationFrame(requestId.current);
+      }
+    };
+  });
+
+  useEffect(() => {
+    window.addEventListener("resize", updateWidth);
+    return () => {
+      window.removeEventListener("resize", updateWidth);
+    };
+  }, []);
+
   return (
-    <section>
-      <div className={`container`}>
-        <div className={projects.sectionHeader}>
-          <h2>{t("projects.title")}</h2>
-          <h3>{t("projects.phases")}</h3>
-        </div>
-        <div className={projects.accContainer}>
-          {projectsInfo.map((item, index) => (
+    <section className={`${home.section} ${projects.projectsSection}`}>
+      <div className={`${projects.containerProjects} container`}>
+        <h2>{t("projects.title")}</h2>
+        <div
+          id={projects.projectsGallery}
+          ref={projectGalleryRef}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          onMouseDown={handleTouchStart}
+          onMouseMove={handleTouchMove}
+          onMouseLeave={handleTouchEnd}
+          onMouseUp={handleTouchEnd}
+        >
+          {projectsData.map(({ id, name, imgPath, link }) => (
             <div
-              key={`projectsItem-${index}`}
-              className={`${projects.accItem} ${
-                active === index ? projects.active : ""
-              }`}
-              onClick={() => handleToggle(index)}
+              className={projects.projectItem}
+              key={id}
+              ref={(el) => addToRefs(el, itemsRefs)}
             >
-              <div className={projects.itemTitle}>
-                <h4>{item.title}</h4> {/* Usa item.title dalla traduzione */}
-                <button className={projects.toggleIcon}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 64 64"
-                    strokeWidth="3"
-                    stroke="currentColor"
-                    fill="none"
-                  >
-                    <polyline points="6.53 18.86 33.16 44.12 57.42 18.86" />
-                  </svg>
-                </button>
-              </div>
-              {/* Testo che viene mostrato/nascondo nello stesso div */}
-              <div
-                ref={contentRef.current[index]}
-                className={projects.accContent}
-                style={
-                  active === index
-                    ? {
-                        height:
-                          contentRef.current[index]?.current?.scrollHeight,
-                      }
-                    : { height: "0px" }
-                }
-              >
-                <div className={projects.accBody}>
-                  <p>{item.description}</p>
-                </div>
-              </div>
+              <figure>
+                <a
+                  className={projects.projectName}
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {name}
+                </a>
+                <img src={imgPath} alt={name} />
+              </figure>
             </div>
           ))}
         </div>
