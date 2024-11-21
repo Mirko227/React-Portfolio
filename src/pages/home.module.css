@@ -3,12 +3,12 @@
   width: 100%;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  scroll-snap-stop: always;
 }
 
 .section {
   min-height: 100%; 
   width: 100%;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
