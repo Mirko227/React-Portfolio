@@ -10,7 +10,7 @@ gsap.registerPlugin(useGSAP, ExpoScaleEase);
 
 const Navbar = function Navbar()
 {
-  const { t } = useTranslation();
+      const { t } = useTranslation();
   const navContainer = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
