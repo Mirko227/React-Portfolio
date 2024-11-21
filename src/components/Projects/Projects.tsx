@@ -1,24 +1,24 @@
 import React, { useState, useRef, RefObject } from "react";
-import work from "./work.module.css";
+import projects from "./projects.module.css";
 import { useTranslation } from "react-i18next";
 
-// Definizione dell'interfaccia per gli oggetti workInfo
-interface WorkInfoItem {
+// Definizione dell'interfaccia per gli oggetti projectsInfo
+interface projectsInfoItem {
   title: string;
   description: string;
 }
 
-function Work() {
+function Projects() {
   // Stato attivo con un numero o null
   const [active, setActive] = useState<number | null>(null);
   const { t } = useTranslation();
 
-  // Ottieni workInfo come array di WorkInfoItem da t
-  const workInfo: WorkInfoItem[] = t("work.workInfo", { returnObjects: true });
+  // Ottieni projectsInfo come array di projectsInfoItem da t
+  const projectsInfo: projectsInfoItem[] = t("projects.projectsInfo", { returnObjects: true });
 
   // Ref per i contenuti dell'accordion, array di RefObject HTMLDivElement
   const contentRef = useRef<Array<RefObject<HTMLDivElement>>>(
-    workInfo.map(() => React.createRef())
+    projectsInfo.map(() => React.createRef())
   );
 
   // Gestione del toggle
@@ -29,22 +29,22 @@ function Work() {
   return (
     <section>
       <div className={`container`}>
-        <div className={work.sectionHeader}>
-          <h2>{t("work.title")}</h2>
-          <h3>{t("work.phases")}</h3>
+        <div className={projects.sectionHeader}>
+          <h2>{t("projects.title")}</h2>
+          <h3>{t("projects.phases")}</h3>
         </div>
-        <div className={work.accContainer}>
-          {workInfo.map((item, index) => (
+        <div className={projects.accContainer}>
+          {projectsInfo.map((item, index) => (
             <div
-              key={`workItem-${index}`}
-              className={`${work.accItem} ${
-                active === index ? work.active : ""
+              key={`projectsItem-${index}`}
+              className={`${projects.accItem} ${
+                active === index ? projects.active : ""
               }`}
               onClick={() => handleToggle(index)}
             >
-              <div className={work.itemTitle}>
+              <div className={projects.itemTitle}>
                 <h4>{item.title}</h4> {/* Usa item.title dalla traduzione */}
-                <button className={work.toggleIcon}>
+                <button className={projects.toggleIcon}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 64 64"
@@ -59,7 +59,7 @@ function Work() {
               {/* Testo che viene mostrato/nascondo nello stesso div */}
               <div
                 ref={contentRef.current[index]}
-                className={work.accContent}
+                className={projects.accContent}
                 style={
                   active === index
                     ? {
@@ -69,7 +69,7 @@ function Work() {
                     : { height: "0px" }
                 }
               >
-                <div className={work.accBody}>
+                <div className={projects.accBody}>
                   <p>{item.description}</p>
                 </div>
               </div>
@@ -81,4 +81,4 @@ function Work() {
   );
 }
 
-export default Work;
+export default Projects;
