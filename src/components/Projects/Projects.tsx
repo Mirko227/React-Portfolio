@@ -110,7 +110,7 @@ function Projects() {
 
   return (
     <section className={`${home.section} ${projects.projectsSection}`}>
-      <div className={`${projects.containerProjects} container`}>
+      <div className={`${projects.containerProjects} container no-tap-highlight`}>
         <h2>{t("projects.title")}</h2>
         <div
           id={projects.projectsGallery}

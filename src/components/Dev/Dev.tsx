@@ -132,7 +132,7 @@ function Dev() {
     <section className={`${home.section} grid-center`}>
       <div className={`${dev.containerDev} container`}>
         <h2>{t("dev.title")}</h2>
-        <div className={dev.wrapperDev} ref={container}>
+        <div className={`${dev.wrapperDev} no-tap-highlight`} ref={container}>
           {devData.map(({ id, number, title, ulList }) => (
             <React.Fragment key={id}>
               <div

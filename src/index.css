@@ -62,6 +62,9 @@
     }
   }
   
+  .no-tap-highlight{
+    -webkit-tap-highlight-color: transparent;
+  }
 
   /* scrollbar styling */
 
@@ -87,6 +90,7 @@
   ::-webkit-scrollbar-track{
       background: transparent;
   }
+  
   
 /* ---------------- */
 
