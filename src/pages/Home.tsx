@@ -37,12 +37,14 @@ function Home() {
 
   return (
     <>
-      <div className={home.mainContainer} ref={mainContainerRef}>
-        <Hero />
-        <About />
-        <Dev />
-        <Projects />
-        <Contact />
+    <div className={home.wrapper}>
+        <div className={home.mainContainer} ref={mainContainerRef}>
+          <Hero />
+          <About />
+          <Dev />
+          <Projects />
+          <Contact />
+        </div>
       </div>
     </>
   );

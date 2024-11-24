@@ -1,3 +1,10 @@
+.wrapper{   /* previene che la barra url venga  */
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
 .main-container {
   height: 100%;
   width: 100%;
