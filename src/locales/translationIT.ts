@@ -115,7 +115,7 @@ const translationIT: Translation = {
         imgPath: `${projectsImgPaths.javaCalculator}`,
         languages: ["Java"],
         description:
-          "Una calcolatrice sviluppata insieme a due compagni delle superiori, che permette di eseguire tutte le operazioni aritmetiche di base, oltre a calcoli come elevazione a potenza, radice quadrata, seno e coseno. Il progetto è stato realizzato utilizzando PyCharm Community, Git e GitHub.",
+          "Una calcolatrice sviluppata insieme a due compagni delle superiori, che permette di eseguire tutte le operazioni aritmetiche di base, oltre a calcoli come elevazione a potenza, radice quadrata, seno e coseno. Il progetto è stato realizzato utilizzando Intellij, Git e GitHub.",
         link: "https://github.com/Mirko227/Calcolatrice-Java",
       },
       {

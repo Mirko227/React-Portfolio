@@ -115,7 +115,7 @@ const translationEN: Translation = {
         imgPath: `${projectsImgPaths.javaCalculator}`,
         languages: ["Java"],
         description:
-          "A calculator developed together with two high school classmates, which allows performing all basic arithmetic operations, as well as calculations such as exponentiation, square root, sine, and cosine. The project was realized using PyCharm Community and git.",
+          "A calculator developed together with two high school classmates, which allows performing all basic arithmetic operations, as well as calculations such as exponentiation, square root, sine, and cosine. The project was realized using Intellij Community and git.",
         link: "https://github.com/Mirko227/Calcolatrice-Java",
       },
       {
